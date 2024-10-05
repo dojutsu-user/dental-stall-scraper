@@ -28,6 +28,9 @@ class Settings(BaseSettings):
                                       env="DENTALSTALL_BASE_URL")
     dentalstall_max_retries: int = Field(3)
 
+    # output settings
+    output_json_filename: str = Field("outputs.json")
+
     class Config:
         env_file = ".env.dev"
 

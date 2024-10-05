@@ -81,6 +81,9 @@ The Dentalstall Scraper Tool is a web scraping utility for collecting product in
    curl --location --request POST 'http://127.0.0.1:8000/scrape' --header 'Authorization: Bearer your-secure-token' --header 'Content-Type: application/json' --data-raw '{"total_pages": 6}'
    ```
 
+4. **Output**:
+   Images are stored in a `images` folder and output json is stored in `outputs.json` file name. Both of these settings are configurable in `settings.py` as `images_folder` and `output_json_filename` respectively.
+
 ## Configuration
 
 

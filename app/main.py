@@ -36,7 +36,7 @@ def scrape(request: ScrapeRequest, token: str = Depends(authenticate)):
     scraper = DentalStallScraper()
     cache = Cache()
     notifier = LoggingNotification()
-    db = ProductStorage(os.path.abspath("outputs.json"))
+    db = ProductStorage(os.path.abspath(get_settings().output_json_filename))
 
     scraped_products = scraper.scrape(request.total_pages)
     new_count = 0
