@@ -2,6 +2,12 @@
 
 The Dentalstall Scraper Tool is a web scraping utility for collecting product information from the Dentalstall website. The tool scrapes product details such as product ID, title, price, and images, and then stores this data in a local file. It also caches the product details in Redis for efficient future access and sends notifications about newly scraped and updated products via logging, email, and SMS.
 
+[![asciicast](https://asciinema.org/a/k0pjTUq2Q5dYt25AxnLtj28a7.svg)](https://asciinema.org/a/k0pjTUq2Q5dYt25AxnLtj28a7)
+
+<div style="text-align:center; font-size:18px; font-family:Arial, sans-serif;">
+    (<i>Demo</i>)
+</div>
+
 
 ## Table of Contents
 
@@ -68,7 +74,7 @@ The Dentalstall Scraper Tool is a web scraping utility for collecting product in
     Start the server
 
    ```bash
-   uvicorn main:app --reload
+   uvicorn app.main:app --reload
    ```
 
 3. **Access the API**:
