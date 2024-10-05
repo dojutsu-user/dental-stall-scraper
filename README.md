@@ -78,7 +78,8 @@ The Dentalstall Scraper Tool is a web scraping utility for collecting product in
    Example using `curl`:
 
    ```bash
-   curl --location --request POST 'http://127.0.0.1:8000/scrape' --header 'Authorization: Bearer your-secure-token' --header 'Content-Type: application/json' --data-raw '{"total_pages": 6}'```
+   curl --location --request POST 'http://127.0.0.1:8000/scrape' --header 'Authorization: Bearer your-secure-token' --header 'Content-Type: application/json' --data-raw '{"total_pages": 6}'
+   ```
 
 ## Configuration
 
