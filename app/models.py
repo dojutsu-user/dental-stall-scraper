@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, field_validator
 
 
 class Product(BaseModel):
@@ -9,4 +9,12 @@ class Product(BaseModel):
 
 
 class ScrapeRequest(BaseModel):
-    total_pages: int
+    total_pages: int = Field(...,
+                             description="Total number of pages to scrape")
+
+    @field_validator('total_pages')
+    @classmethod
+    def total_pages_must_be_positive(cls, value: int) -> int:
+        if value <= 0:
+            raise ValueError("total_pages must be greater than 0")
+        return value
